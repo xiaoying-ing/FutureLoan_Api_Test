@@ -14,7 +14,8 @@
 @Desc    :
 
 '''
-
+import re
+from Common.handle_conf import red_conf
 
 class EnvData:
     """
@@ -23,6 +24,41 @@ class EnvData:
     member_id = None
     token = None
     pass
+
+
+def replace_case_by_reglur(case):
+    '''
+    对excel用例中读取出来的整条测试用例做全部替换
+    包括 url,request_data,expected,check_sql
+    :param case: 一整条完整的测试用例
+    :return: 替换后的测试用例
+    '''
+    for key, value in case.items():
+        if value is not None and isinstance(value, str): # 确保是个字符串
+            case["key"] = replace_by_regular(value)
+        return case
+
+
+def replace_by_regular(data):
+    '''
+    将字符串当中，匹配#(.*?)#部分，替换对应的真实数据。
+    将真实数据只从2个地方去获取：1.配置文件中的data区域；2.EvnData的类属性（全应是字符串类型）
+    :param data: 字符串
+    :return: 返回替换后的字符串
+    '''
+    res = re.findall("#(.*?)#", data)
+    # 标识符对应的值，来自于： 1.环境变量 2.配置文件
+    if res:
+        for item in res:
+            try:
+                value = red_conf.get("data", item)
+            except:
+                try:
+                    value = getattr(EnvData, item)
+                except AttributeError:
+                    continue
+            data = data.replace("#{}#".format(item), value)
+    return data
 
 
 def replace_mark_with_data(case, mark, real_data):
