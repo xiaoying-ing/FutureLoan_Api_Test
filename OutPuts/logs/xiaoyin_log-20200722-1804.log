@@ -1,0 +1,165 @@
+2020-07-22 18:04:43,500-xiaoyin_log-INFO-60 line-==================充值模块接口测试开始==================
+2020-07-22 18:04:43,500-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json'}
+2020-07-22 18:04:43,500-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:43,501-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/register
+2020-07-22 18:04:43,501-xiaoyin_log-INFO-56 line-请求数据为：{'mobile_phone': '18770915871', 'pwd': '19940916'}
+2020-07-22 18:04:43,607-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:43,607-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '账号已存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:43,607-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json'}
+2020-07-22 18:04:43,607-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:43,607-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/login
+2020-07-22 18:04:43,607-xiaoyin_log-INFO-56 line-请求数据为：{'mobile_phone': '18770915871', 'pwd': '19940916'}
+2020-07-22 18:04:43,705-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:43,706-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9044405.76, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2020-07-22 18:09:41', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:43,706-xiaoyin_log-INFO-63 line-登录的响应数据为：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9044405.76, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1, 'token_info': {'token_type': 'Bearer', 'expires_in': '2020-07-22 18:09:41', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:43,707-xiaoyin_log-INFO-68 line-登录用户id:2049967
+ token:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw
+2020-07-22 18:04:43,710-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:43,777-xiaoyin_log-INFO-82 line-充值之前用户余额：9044405.76
+2020-07-22 18:04:43,777-xiaoyin_log-INFO-84 line-充值金额为：600
+2020-07-22 18:04:43,777-xiaoyin_log-INFO-86 line-预期充值之后的金额为：9045005.76
+2020-07-22 18:04:43,778-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:43,778-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:43,778-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:43,778-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 600}
+2020-07-22 18:04:43,860-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:43,860-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9045005.76, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:43,861-xiaoyin_log-INFO-96 line-期望结果为：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9045005.76}}
+2020-07-22 18:04:43,931-xiaoyin_log-INFO-106 line-充值之后用余额：9045005.76
+2020-07-22 18:04:43,932-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:43,932-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,000-xiaoyin_log-INFO-82 line-充值之前用户余额：9045005.76
+2020-07-22 18:04:44,000-xiaoyin_log-INFO-84 line-充值金额为：600.1
+2020-07-22 18:04:44,000-xiaoyin_log-INFO-86 line-预期充值之后的金额为：9045605.86
+2020-07-22 18:04:44,001-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,001-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,001-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,001-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 600.1}
+2020-07-22 18:04:44,081-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,081-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9045605.86, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,081-xiaoyin_log-INFO-96 line-期望结果为：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9045005.76}}
+2020-07-22 18:04:44,081-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,082-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,084-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,152-xiaoyin_log-INFO-82 line-充值之前用户余额：9045605.86
+2020-07-22 18:04:44,152-xiaoyin_log-INFO-84 line-充值金额为：600.22
+2020-07-22 18:04:44,152-xiaoyin_log-INFO-86 line-预期充值之后的金额为：9046206.08
+2020-07-22 18:04:44,153-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,153-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,153-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,153-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 600.22}
+2020-07-22 18:04:44,234-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,234-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9046206.08, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,234-xiaoyin_log-INFO-96 line-期望结果为：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9045605.86}}
+2020-07-22 18:04:44,234-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,234-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,236-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,301-xiaoyin_log-INFO-82 line-充值之前用户余额：9046206.08
+2020-07-22 18:04:44,302-xiaoyin_log-INFO-84 line-充值金额为：500000
+2020-07-22 18:04:44,302-xiaoyin_log-INFO-86 line-预期充值之后的金额为：9546206.08
+2020-07-22 18:04:44,302-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,303-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,303-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,303-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 500000}
+2020-07-22 18:04:44,378-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,378-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9546206.08, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,379-xiaoyin_log-INFO-96 line-期望结果为：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9046206.08}}
+2020-07-22 18:04:44,379-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,379-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,380-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,381-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,381-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,381-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,381-xiaoyin_log-INFO-56 line-请求数据为：{'amount': 600}
+2020-07-22 18:04:44,445-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,445-xiaoyin_log-INFO-66 line-响应数据：{'code': 1, 'msg': '用户id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,445-xiaoyin_log-INFO-96 line-期望结果为：{'code': 1, 'msg': '用户id为空'}
+2020-07-22 18:04:44,446-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,446-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,446-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,446-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,446-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,446-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 98989898, 'amount': 600}
+2020-07-22 18:04:44,516-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,516-xiaoyin_log-INFO-66 line-响应数据：{'code': 1007, 'msg': '无权限访问，请检查参数', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,516-xiaoyin_log-INFO-96 line-期望结果为：{'code': 1007, 'msg': '无权限访问，请检查参数'}
+2020-07-22 18:04:44,516-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,517-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,517-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,517-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,517-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,517-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': '2049967', 'amount': 600}
+2020-07-22 18:04:44,592-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,592-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9546806.08, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,593-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '数字格式化异常'}
+2020-07-22 18:04:44,593-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,594-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,595-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,595-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,595-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,595-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,595-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 15.0, 'amount': 600}
+2020-07-22 18:04:44,664-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,664-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '数字格式化异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,664-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '数字格式化异常'}
+2020-07-22 18:04:44,665-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,665-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,666-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,666-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,666-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,666-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 0}
+2020-07-22 18:04:44,737-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,737-xiaoyin_log-INFO-66 line-响应数据：{'code': 0, 'msg': 'OK', 'data': {'id': 2049967, 'leave_amount': 9546806.08, 'mobile_phone': '18770915871', 'reg_name': '小柠檬', 'reg_time': '2020-07-22 14:54:27.0', 'type': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,737-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+2020-07-22 18:04:44,737-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,737-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,739-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,740-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,740-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,740-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,740-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': -600}
+2020-07-22 18:04:44,809-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,810-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,810-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+2020-07-22 18:04:44,810-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,810-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,813-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,813-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,813-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,813-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,813-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967}
+2020-07-22 18:04:44,889-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,890-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '余额必须为数值型', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,890-xiaoyin_log-INFO-96 line-期望结果为：{'code': 1, 'msg': '充值金额为空'}
+2020-07-22 18:04:44,890-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,890-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,891-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,892-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,892-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,892-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,892-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 600.222}
+2020-07-22 18:04:44,960-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:44,961-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '余额小数超过两位', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:44,961-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '金额小数超过两位'}
+2020-07-22 18:04:44,961-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:44,961-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:44,962-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:44,963-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:44,963-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:44,963-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:44,964-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': 500001}
+2020-07-22 18:04:45,033-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:45,034-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '余额必须大于0并且小于或者等于500000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:45,034-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '金额必须大于0并且小于或者等于500000'}
+2020-07-22 18:04:45,034-xiaoyin_log-INFO-110 line-断言失败
+2020-07-22 18:04:45,034-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:45,036-xiaoyin_log-INFO-71 line-==================接口用例执行开始==================
+2020-07-22 18:04:45,036-xiaoyin_log-INFO-53 line-请求头为：{'X-Lemonban-Media-Type': 'lemonban.v2', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjIwNDk5NjcsImV4cCI6MTU5NTQxMjU4MX0.38sWCSmC_KHZtykUI9_uZJk5D-VbmExYuOZMEXigv-rSU9Xav6p9Q9aOz-Ck9EIwVUwQ9BJaKcrWD2i9opM0mw'}
+2020-07-22 18:04:45,036-xiaoyin_log-INFO-54 line-请求方法为：post
+2020-07-22 18:04:45,036-xiaoyin_log-INFO-55 line-请求url为：http://api.lemonban.com/futureloan/member/recharge
+2020-07-22 18:04:45,036-xiaoyin_log-INFO-56 line-请求数据为：{'member_id': 2049967, 'amount': '5万'}
+2020-07-22 18:04:45,106-xiaoyin_log-INFO-65 line-响应状态码：200
+2020-07-22 18:04:45,106-xiaoyin_log-INFO-66 line-响应数据：{'code': 2, 'msg': '数字格式化异常', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-07-22 18:04:45,106-xiaoyin_log-INFO-96 line-期望结果为：{'code': 2, 'msg': '数字格式化异常'}
+2020-07-22 18:04:45,106-xiaoyin_log-INFO-114 line-==================接口用例执行结束==================
+2020-07-22 18:04:45,107-xiaoyin_log-INFO-118 line-==================充值模块接口测试结束==================

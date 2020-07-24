@@ -9,22 +9,6 @@
 
 @File    :   test_recharge.py
 
-@Time    :   2020/7/22 14:54
-
-@Desc    :
-
-'''
-# -*- coding:utf-8 -*-
-
-'''
-@Author  :   xiaoyin_ing
-
-@Email   :   2455899418@qq.com
-
-@Software:   PyCharm
-
-@File    :   test_recharge.py
-
 @Time    :   2020/7/10 10:31
 
 @Desc    :
@@ -44,7 +28,7 @@ from TestDatas.excel_data_obtain import test_recharge_datas
 from Common.handle_logger import myLogger
 from Common.handle_requests import set_request
 from Common.handle_mysql import HandleDB
-from Common.handle_case_relpace_data import replace_case_by_reglur, EnvData, clear_EnvData_attrs
+from Common.handle_case_relpace_data import replace_mark_with_data
 from Common.handle_phone import get_old_phone
 import json
 
@@ -55,16 +39,13 @@ db = HandleDB()
 class TestRecharge(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        clear_EnvData_attrs()
         myLogger.info("==================充值模块接口测试开始==================")
         user, password = get_old_phone()
         response_login = set_request("member/login", "post", {"mobile_phone": user, "pwd": password})
         myLogger.info("登录的响应数据为：{}".format(response_login.json()))
-        setattr(EnvData, "member_id", str(jsonpath(response_login.json(), "$..id")[0]))
-        setattr(EnvData, "token", jsonpath(response_login.json(), "$..token")[0])
-        # cls.member_id = jsonpath(response_login.json(), "$..id")[0]
-        # cls.token = jsonpath(response_login.json(), "$..token")[0]
-        myLogger.info("登录用户id:{}\n token:{}".format(EnvData.member_id, EnvData.token))
+        cls.member_id = jsonpath(response_login.json(), "$..id")[0]
+        cls.token = jsonpath(response_login.json(), "$..token")[0]
+        myLogger.info("登录用户id:{}\n token:{}".format(cls.member_id, cls.token))
 
     def setUp(self) -> None:
         myLogger.info("==================接口用例执行开始==================")
@@ -73,8 +54,7 @@ class TestRecharge(unittest.TestCase):
     def test_recharge(self, cases):
         self.__dict__['_testMethodDoc'] = str(cases["number"]) + "-" + cases["case_name"]
         if cases["request_data"].find("#member_id#") != -1:
-            cases = replace_case_by_reglur(cases)
-            # print(cases)
+            cases = replace_mark_with_data(cases, "#member_id#", str(self.member_id))
 
         if cases["check_sql"]:
             user_money_before = db.select_one_data(cases["check_sql"])["leave_amount"]
@@ -83,9 +63,8 @@ class TestRecharge(unittest.TestCase):
             myLogger.info("充值金额为：{}".format(recharge_money))
             user_money_after = round(float(user_money_before) + recharge_money, 2)    # 获取这个值是为了替换用例中的期望数据
             myLogger.info("预期充值之后的金额为：{}".format(user_money_after))
-            setattr(EnvData, "money", str(user_money_after))
-            cases = replace_case_by_reglur(cases)
-        response_recharge = set_request(cases["url"], cases["method"], cases["request_data"], token=EnvData.token)
+            cases = replace_mark_with_data(cases, "#money#", str(user_money_after))
+        response_recharge = set_request(cases["url"], cases["method"], cases["request_data"], token=self.token)
         # user_money = db.select_one_data(cases["check_sql"])["leave_amount"]
         # myLogger.info("充值之后。。。。：{}".format(user_money))
         expected = json.loads(cases["expect_res"])
@@ -99,7 +78,7 @@ class TestRecharge(unittest.TestCase):
                 self.assertEqual(response_recharge.json()["data"]["id"], expected["data"]["id"])
                 self.assertEqual(response_recharge.json()["data"]["leave_amount"], expected["data"]["leave_amount"])
                 user_recharge_after_money = db.select_one_data(cases["check_sql"])["leave_amount"]
-                myLogger.info("充值之后用余额：{}".format(user_recharge_after_money))
+                myLogger.info("实际充值之后用金额：{}".format(user_recharge_after_money))
                 self.assertEqual("{:.2f}".format(float(user_recharge_after_money)), "{:.2f}".format(expected["data"]
                                                                                                     ["leave_amount"]))
         except AssertionError:
@@ -107,8 +86,6 @@ class TestRecharge(unittest.TestCase):
             raise
 
     def tearDown(self) -> None:
-        if hasattr(EnvData,"money"):
-            delattr(EnvData,"money")
         myLogger.info("==================接口用例执行结束==================")
 
     @classmethod

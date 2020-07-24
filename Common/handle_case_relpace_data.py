@@ -17,14 +17,25 @@
 import re
 from Common.handle_conf import red_conf
 
+
 class EnvData:
     """
     存储用例要使用到的数据。
     """
+    money = None
     member_id = None
     token = None
     pass
 
+
+def clear_EnvData_attrs():
+    # 清理 EnvData里设置的属性
+    values = dict(EnvData.__dict__.items())
+    for key, value in values.items():
+        if key.startswith("__"):
+            pass
+        else:
+            delattr(EnvData, key)
 
 def replace_case_by_reglur(case):
     '''
@@ -34,9 +45,9 @@ def replace_case_by_reglur(case):
     :return: 替换后的测试用例
     '''
     for key, value in case.items():
-        if value is not None and isinstance(value, str): # 确保是个字符串
-            case["key"] = replace_by_regular(value)
-        return case
+        if value is not None and isinstance(value, str):  # 确保是个字符串
+            case[key] = replace_by_regular(value)
+    return case
 
 
 def replace_by_regular(data):
@@ -47,6 +58,7 @@ def replace_by_regular(data):
     :return: 返回替换后的字符串
     '''
     res = re.findall("#(.*?)#", data)
+    # print(res)
     # 标识符对应的值，来自于： 1.环境变量 2.配置文件
     if res:
         for item in res:
